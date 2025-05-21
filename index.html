@@ -1,412 +1,701 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>
-        Ashish Gaur
-    </title>
+    <title>Ashish Gaur - Full Stack Python Developer</title>
     <meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
-    <script src="https://use.fontawesome.com/9c70741414.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="icon" href="log-e1678295807357.png">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
-    <style> 
-            body
-            {
-                font-family: 'Roboto', sans-serif;
-
-            }
-    
-            .aaaa
-            {
-                padding: 25px;
-                
-            }
-            .aaaa1
-            {
-                padding: 20px;
-                
-                
-            }
-            .aaaa2
-            {
-                padding: 50px;
-                
-                
-            }
-            .head1
-            {
-                color:rgb(0, 0, 0);
-                font-size: 30px;
-            }
-            hr 
-            {
-            border: 0;
-            height: 2px;
-            background-image: linear-gradient(to right, transparent, rgb(197, 143, 143), transparent); 
-            
-            }
-            .img_pro
-
-            {
-                background-image: url('https://images.unsplash.com/photo-1631650317096-448727932608?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80');
-                background-repeat: no-repeat;
-                background-size: cover;
-                background-position: center center;
-                width: auto;
-                height: 1700;
-                padding: 25px 25px 25px 25px;
-                background-attachment: fixed;
-                
-                
-            }
-            h1,h2,h3,h4,h5,h6,b,p
-            {
-                color: rgb(0, 0, 0);
-                
-            }
-            .aaaa2:hover
-            {
-                font-size: 20px;
-            }
-            .first, .last
-            {
-                
-                background-color: rgb(7, 6, 6) transparent;
-       
-                background-attachment: fixed;
-                box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.13), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-                border-radius: 20px;
-
-    
-            }
-	    .row
-        {
-            margin-left: auto !important;
-            margin-right: auto  !important;
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="log-e1678295807357.png">
+    <style>
+        :root {
+            --primary-color: #0d6efd;
+            --secondary-color: #6c757d;
+            --light-bg: rgba(255, 255, 255, 0.95);
+            --dark-text: #212529;
+            --light-text: #f8f9fa;
+            --accent-color: #fd7e14;
+            --section-padding: 80px 0;
         }
-        .cov
-        {
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f8f9fa;
+            color: var(--dark-text);
+            line-height: 1.8;
+        }
+        
+        .bg-wrapper {
+            background-image: url('https://images.unsplash.com/photo-1631650317096-448727932608?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80');
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center center;
+            background-attachment: fixed;
+            padding: 40px 20px;
+            min-height: 100vh;
+        }
+        
+        .section {
+            background-color: var(--light-bg);
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            margin-bottom: 30px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .section:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+        }
+        
+        .section-header {
+            background-color: var(--primary-color);
+            color: var(--light-text);
+            padding: 20px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            text-align: center;
+        }
+        
+        .section-content {
             padding: 30px;
         }
+        
+        .profile-section {
+            text-align: center;
+            padding: 40px 20px;
+        }
+        
+        .profile-name {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+            color: var(--primary-color);
+        }
+        
+        .profile-title {
+            font-size: 1.2rem;
+            color: var(--secondary-color);
+            margin-bottom: 20px;
+        }
+        
+        .profile-contact {
+            margin-top: 20px;
+        }
+        
+        .profile-contact a {
+            color: var(--primary-color);
+            text-decoration: none;
+            transition: color 0.3s ease;
+            margin: 0 10px;
+        }
+        
+        .profile-contact a:hover {
+            color: var(--accent-color);
+        }
+        
+        .profile-bio {
+            max-width: 800px;
+            margin: 20px auto;
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+        
+        .experience-item {
+            border-left: 3px solid var(--primary-color);
+            padding-left: 20px;
+            margin-bottom: 30px;
+            position: relative;
+        }
+        
+        .experience-item::before {
+            content: '';
+            position: absolute;
+            width: 15px;
+            height: 15px;
+            border-radius: 50%;
+            background-color: var(--primary-color);
+            left: -9px;
+            top: 5px;
+        }
+        
+        .experience-title {
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: var(--primary-color);
+            margin-bottom: 5px;
+        }
+        
+        .experience-company {
+            font-size: 1.1rem;
+            font-weight: 500;
+            margin-bottom: 0;
+        }
+        
+        .experience-duration {
+            font-size: 0.9rem;
+            color: var(--secondary-color);
+            margin-bottom: 10px;
+        }
+        
+        .skill-category {
+            margin-bottom: 20px;
+        }
+        
+        .skill-title {
+            font-weight: 600;
+            margin-bottom: 10px;
+            color: var(--primary-color);
+        }
+        
+        .skill-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        
+        .skill-tag {
+            background-color: #e9ecef;
+            padding: 8px 15px;
+            border-radius: 30px;
+            font-size: 0.9rem;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+        
+        .skill-tag:hover {
+            background-color: var(--primary-color);
+            color: white;
+        }
+        
+        .education-item {
+            margin-bottom: 20px;
+        }
+        
+        .education-name {
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-bottom: 5px;
+        }
+        
+        .certification-item {
+            margin-bottom: 25px;
+        }
+        
+        .certification-title {
+            font-weight: 600;
+            margin-bottom: 5px;
+        }
+        
+        .certification-id {
+            font-size: 0.9rem;
+            color: var(--secondary-color);
+        }
+        
+        .social-links {
+            text-align: center;
+            padding: 20px 0;
+        }
+        
+        .social-links a {
+            display: inline-block;
+            margin: 0 15px;
+            color: var(--primary-color);
+            font-size: 1.5rem;
+            transition: transform 0.3s ease, color 0.3s ease;
+        }
+        
+        .social-links a:hover {
+            transform: translateY(-5px);
+            color: var(--accent-color);
+        }
+        
+        .footer {
+            background-color: var(--secondary-color);
+            color: white;
+            text-align: center;
+            padding: 20px;
+            border-radius: 0 0 15px 15px;
+        }
+        
+        .btn-download {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 10px 25px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+            display: inline-block;
+            margin-top: 15px;
+        }
+        
+        .btn-download:hover {
+            background-color: #0b5ed7;
+            transform: translateY(-3px);
+            color: white;
+        }
+        
+        .project-description {
+            margin-top: 10px;
+        }
+        
+        .tech-stack {
+            margin-top: 10px;
+            font-style: italic;
+            color: var(--secondary-color);
+        }
+        
+        @media (max-width: 768px) {
+            .profile-name {
+                font-size: 2rem;
+            }
             
+            .section-content {
+                padding: 20px;
+            }
+            
+            .bg-wrapper {
+                padding: 20px 10px;
+            }
+        }
     </style>
 </head>
 <body>
-    <div class="row img_pro">
-        <div class="row first">
-            <div class="col-lg-9 aaaa1 ">
-            <center>
-                <h2><b>ASHISH GAUR (B.tech)</b>
-                    <br>Full Stack Python Developer | Software Engineer</h2>
-            </center>
-            </div>
-            <div class="col-lg-3 aaaa1">
-            <center>
-		<a href="mailto:ashishgaur19981966@gmail.com"><h6>Email - ashishgaur19981966@gmail.com</h6></a>	    
-                <a href="tel:+91 9928359566" style="text-decoration: none;"><h6>Contact - 9588955258</h6></a>
-		<p><a href="https://drive.google.com/file/d/1XjWdTJa0Ggp6UTET_cQoxLx3bYYc9m3A/view?usp=sharing">Download My Resume</a></p>
-            </center>    
-            </div>
-            <div class="col-lg-12 aaaa1" >
-            <center>
-                <p>I have been working with teams & people across the Globe, to achieve new & better standards for understanding technology, I am Result-oriented Full Stack Developer with 2+ years of experience in Design, Development, Testing and Implementation of Object-Oriented applications and Web based Enterprise Applications using Python3 and Javascript. Experienced in collaborating with cross-functional teams and working in Waterfall and Agile (Scrum) methodology to ensure web applications are developed as specified by business requirements.</p>
-            </center>
-            </div>
-        </div>
-        <div class="row">
-            
-        </div>
-        <br>
-        <br>
-
-        <hr>
-        <center>
-        <h6>WORK EXPERIENCE & PROJECTS</h6>
-        </center>
-        <div class="row">
-            <div class="col-lg-6  aaaa1">
-                
-                <b class="head1">#1 Industrial training @ TIPL</b>
-                <h6>Toshniwal industries</h6>
-                <h6>Ajmer</h6>
-                <p><a href="https://www.tipl.com/">www.tipl.com</a></p>
-                <h4>Duration 1.5 Months of Experience</h4>
-		<p>From- June 2019 To- Half of July 2019 (Full Time Internship)</p>    
-                
-		<h4>Description</h4>
-                <p>
-                    Projects that we worked on<br>
-                    <li> <b>Feedback system</b><br>
-                    Technology used - PHP, HTML, CSS, My SQL </li>
-
-                </p>
-
-            
-            </div>
-            <div class="col-lg-6  aaaa1">
-                <b class="head1">#2 Project Execution Team</b>
-                <h6>SolutionsHead Technical Services</h6>
-                <h6>Ajmer</h6>
-                <p><a href="http://www.solutionshead.in/">www.solutionshead.in</a></p>
-                <h4>Duration 1.5 Year of Experience</h4>
-		<p>From- August 2019 To- Half of November 2021 (Part-time Freelancer)</p>    
-
-                <h4>Description</h4>
-                <p>
-                    Projects that we worked on <br>
-                <a href="http://www.rodentsec.com/">www.rodentsec.com</a><br>
-                <li><b>Web Dev, thermal systems, made the monitoring service </b><br>
-                    Technology used - HTML, CSS, PHP, JAVASCRIPT, THERMAL SYSTEMS(CAMERAS), payment gateway integration, automated email sending using sendgrid.</li>
-                </p>
-
-            
-            </div>
-        </div>
-      
-        <div class="row">
-            <div class="col-lg-6  aaaa1">
-                    <b class="head1">#3 Junior Developer</b>
-                    <h6>DEXTERWIT TECHNOLOGIES</h6>
-                    <h6>Ajmer</h6>
-                    <p><a href="https://www.dexterwit.com/">www.dexterwit.com</a></p>
-                    <h4>Duration 5 Months of Experience</h4>
-		    <p>From- January 2022 To- May 2022 (Full time Project based)</p>
-        
-                    <h4>Description</h4>
-                    <p>
-                    Projects that we worked on<br>
-                    <a href="https://www.vibrnz.com/">www.vibrnz.com</a><br>
-                    <li><b>Frontend, Designing, Backend, Database.</b><br>
-                    Technology used - GITHUB, BOOTSTRAP, HTML, CSS, FONTAWESOME,<br>Flask My SQL, PHP, AWS.</li>
-
-                    </p>
-        
-
-
-            
-            </div>
-            <div class="col-lg-6 aaaa1">
-                <b class="head1">#4 Wordpress Developer</b>
-                <h6>Web Tech Street </h6>
-                <h6>Ajmer</h6>
-                <p><a href="https://webtechstreet.com/">www.webtechstreet.com</a></p>
-                <h4>Duration 3 Months of Experience</h4>
-	        <p>From- June 2022 To- Half of September 2022 (Full time Project based)</p>
-        
-                <h4>Description</h4>
-                <p>
-                    Projects that we worked on<br>
+    <div class="bg-wrapper">
+        <div class="container">
+            <div class="section">
+                <div class="profile-section">
+                    <h1 class="profile-name">ASHISH GAUR</h1>
+                    <h2 class="profile-title">Full Stack Python Developer | Software Engineer | Systems Engineer | Nifi Developer </h2>
                     
-                    <li><b>Elementor widget development.</b><br>
-                    Technology used - GITHUB, BOOTSTRAP, HTML, CSS, FONTAWESOME, PHP, JAVASCRIPT<br>WORDPRESS, AWS.</li>
-		    <li>Worked on <a href="https://wpvibes.com/">https://wpvibes.com/</a></li>
-
-                </p>
-            
-
-
-            
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-lg-6  aaaa1">
-                
-                <b class="head1">#5 Currently Python Developer</b>
-                <h6>Company(CMMI Level 3)</h6>
-                <h6>Mumbai</h6>
-                <h4>Since Nov 2022</h4>
-		<p>(Full time Multi-project)</p>   
-                
-		<h4>Description</h4>
-                <div>
-                    Projects that we worked on<br>
-                    <li><b>#1 Internal tracking system</b><br></li>
-                    <div class="cov">Technology used - Python, Django, PostgreSQL, Mongodb, Celery Integration, Mail Sending(sendgrid), Heroku, Sentry, Apache and Nginx, Web Socket, OAuth.<br></div>
-                    
-                    <li><b>#2 Latitudepay project(Support Engineer)<br><a href=https://www.latitudefinancial.com.au/>www.latitudefinancial.com</a></b><br></li>
-                    <div class="cov">Technology used - Python, Django Rest Framework, JWT token, Payment Integration, majorly frontend.<br></div>
-                    
-                    <li><b>#3 NTT DATA(Cisco DNAC)<br><a href=https://www.nttdata.com/global/en/>www.nttdata.com</a></b><br></li>
-                    <div class="cov">Technology used - Python, Apache NiFi(Majorly), jolt transformation language, Apache Kafka.<br>
-                        <h6>More Informartion</h6>
-                        <li>Major parts are Discovery/Research</li>
-                        <li>defined New business logic & their changes</li>
-                        <li>
-                            I worked with NTT Data for Woolworths and Parliament of wallonia we used NiFi to manage their microservices Architecture under Clement Chang. My core responsibility were research & developement for many microservices such as "image not compiled", "config not compiled" and searching for the golden Images and I also developed a method to hide secrets & passwords in flowfiles, using Azure Key Vault.
-                        </li>
+                    <div class="profile-contact">
+                        <a href="mailto:ashishgaur19981966@gmail.com"><i class="fas fa-envelope me-2"></i>ashishgaur19981966@gmail.com</a>
+                        <a href="tel:+919588955258"><i class="fas fa-phone me-2"></i>+91 9588955258</a>
+                        <a href="https://drive.google.com/file/d/1XjWdTJa0Ggp6UTET_cQoxLx3bYYc9m3A/view?usp=sharing" class="btn-download" target="_blank" rel="noopener noreferrer">
+                            <i class="fas fa-download me-2"></i>Download My Resume
+                        </a>
                     </div>
                     
-                    
-                    <li><b>#4 Audioenhancement Utah(Senior Python developer)<br><a href=https://audioenhancement.com/>www.audioenhancement.com</a></b><br></li>
-                    <div class="cov">Technology used - Python, Flask, Pytest, Sql, backend API<br>
-                    
-                        <h6>More Informartion</h6>
-                        <li>Worked on SNPAS portal for the employees with Tera Trujillo, Isaac</li>
-                        <li>Worked on Announcement feature, Language translation feature</li>
-                        <li>
-                            I worked with Audioenhancement on SNAPS portal for managing their internal Employees, Production and Assembly, It allows admins to access, control and alter things as per their requirements. 
-                        </li>
-                        
-		    
+                    <div class="profile-bio">
+                        I have been working with teams & people across the Globe, to achieve new & better standards for understanding technology. I am a Result-oriented Full Stack Developer with 5+ years of experience in Design, Development, Testing and Implementation of Object-Oriented applications and Web based Enterprise Applications using Python3 and Javascript. Experienced in collaborating with cross-functional teams and working in Waterfall and Agile (Scrum) methodology to ensure web applications are developed as specified by business requirements.
                     </div>
-                    <li><b>#5 Scale.ai project(Software developer)<br><a href=https://scale.com/>www.scale.com</a></b><br></li>
-                    <div class="cov">Technology used - Python, AI, Machine Learning, Javascript, Frontend, Backend, API, Google compute Data<br>
-                    
-                        <h6>More Informartion</h6>
-                        <li>Worked on Google Datacompute </li>
-                        <li>Worked on answering many different problems, on AI, Frontend, Backend, Clouds, Pipelines, Python, Javascript, etc.</li>
-                        <li>
-                            I worked with Kirill Chugunov, Delubio, Johannes Baptist, and Justin Rice TSM lead, the project is called Bulba/Vertigo. 
-                        </li>
-                        
-		    
-                    </div>
-
                 </div>
-
-            
-            </div>
-        </div>
-
-        <hr>
-        <center>
-                <h6>SKILLS</h6>
-        </center>
-            
-
-        
-        <div class="row">
-            <div class="col-lg-12 aaaa1">
-                
-                <p> Web developement, DevOps ,server management Computer Architecture, Data Structure & Algorithms, Network Security, computer networking, Database, web OS
-                    development, computer vision, speech processing, Object Orientation, micro-services, machine learning(Basic), MVC, ORM.
-                    <ul>
-                        <li>Frontend: HTML5/CSS3/JavaScript/Bootstrap/react.js </li>
-                        <li>Languages: C/C++/Python3/PHP/Java(Basic)/Jolt</li>
-                        <li>Web technologies and Services: RESTful/JWT/Oauth</li>
-                        <li>Frameworks: Django/Django Rest Framework(DRF)/Flask/FastAPI</li>
-                        <li>AWS: EC2/S3/route53/lightsail</li>
-                        <li>DB: MySQL, PostgreSQL, MongoDB </li>
-                        <li>Tools: Docker, Redis Caching, Nginx, Gunicorn</li>
-                        <li>Version Control: Git </li>
-                        <li>ETL tools: Apache NiFi </li>
-                        <li>Others: Wordpress, JIRA, Confluence and Postman, Github, Bash, Vim, Nano</li>
-    
-                  
-                    </ul> 
-                </p>
-            </div>
-            <div class="col-lg-12">
             </div>
             
-
-        </div>
-
-        <hr>
-        <center>
-                <h6>EDUCATION & RESEARCH INTERESTS</h6>
-        </center>
-        <div class="row">
-            <div class="col-12 aaaa1">
-                <h3>DAV Centenary Public School</h3>
-                <h6>Ajmer Rajasthan India</h6>
-                <h6>High school or equivalent</h6>
-                <h6>CBSE 10th &12th</h6>
-                <h6>(Science & Mathematics)</h6>
-                <br>
-                <h3>Aryabhatta College of Engineering and Research center(Rajasthan Technical University)</h3>
-                <h6>Ajmer Rajasthan India</h6>
-                <h6>Bachelor’s</h6>
-                <h6>Computer Science Engineering</h6>
-                <h6>08/2017 to 08/2021</h6>
-
+            <div class="section">
+                <div class="section-header">
+                    <h3><i class="fas fa-briefcase me-2"></i>Work Experience</h3>
+                </div>
+                <div class="section-content">
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <div class="experience-item">
+                                <h4 class="experience-title">Systems Engineer</h4>
+                                <h5 class="experience-company">TIPL (Toshniwal Industries)</h5>
+                                <p class="experience-duration">May 2025 - Present</p>
+                                <p>Currently contributing as a Systems Engineer focusing on Developing work Flows for IT department.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="col-lg-6">
+                            <div class="experience-item">
+                                <h4 class="experience-title">Project Manager / IoT Systems Developer</h4>
+                                <h5 class="experience-company">SolutionsHead Technical Services</h5>
+                                <p class="experience-duration">February 2024 - April 2025 (1 year 3 months)</p>
+                                <div class="project-description">
+                                    <p>Services that we worked on: <a href="http://www.rodentsec.com/" target="_blank" rel="noopener noreferrer">www.rodentsec.com</a></p>
+                                    <ul>
+                                        <li><strong>Web Dev, thermal systems, monitoring service</strong></li>
+                                        <li><strong>Sensor Integration:</strong> Engineered IoT solutions with thermocouple and RTD sensors, optimizing data accuracy and system reliability.</li>
+                                        <li><strong>Data Acquisition & Calibration:</strong> Developed robust sensor calibration modules, improving data integrity by 15%.</li>
+                                        <li><strong>System Architecture:</strong> Implemented efficient IoT protocols (MQTT, REST APIs) for seamless device communication and data flow.</li>
+                                        <li><strong>Predictive Analytics:</strong> Leveraged sensor data to build predictive maintenance models, reducing downtime by 10%.</li>
+                                    </ul>
+                                    <p class="tech-stack">Technologies: Web development, AI/ML models, MQTT protocol, ESP32, thermal cameras, thermocouples</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="col-lg-6">
+                            <div class="experience-item">
+                                <h4 class="experience-title">Python Developer</h4>
+                                <h5 class="experience-company">Thoughtwin (CMMI Level 3)</h5>
+                                <p class="experience-duration">November 2022 - January 2024 (1 year 3 months)</p>
+                                <div class="project-description">
+                                    <p><strong>#1 Internal tracking system</strong></p>
+                                    <ul>
+                                        <li>Developed and maintained a comprehensive internal tracking system, enhancing operational efficiency.</li>
+                                        <li>Integrated Celery for asynchronous task processing and SendGrid for automated email notifications.</li>
+                                        <li>Configured and managed deployments on Heroku, leveraging Sentry for error tracking and monitoring.</li>
+                                        <li>Implemented secure authentication using OAuth and managed real-time communication via WebSockets.</li>
+                                    </ul>
+                                    <p class="tech-stack">Technologies: Python, Django, PostgreSQL, MongoDB, Celery Integration, Mail Sending (SendGrid), Heroku, Sentry, Apache and Nginx, Web Socket, OAuth</p>
+                                    
+                                    <p><strong>#2 Latitudepay project (Support Engineer)</strong></p>
+                                    <ul>
+                                        <li>Provided critical support for the Latitudepay project, ensuring smooth operation of payment integrations.</li>
+                                        <li>Worked with Django Rest Framework and secured APIs using JWT tokens.</li>
+                                    </ul>
+                                    <p class="tech-stack">Technologies: Python, Django Rest Framework, JWT token, Payment Integration</p>
+                                    
+                                    <p><strong>#3 NTT DATA (Cisco DNAC)</strong></p>
+                                    <ul>
+                                        <li>Contributed to the NTT DATA project, specifically with Cisco DNAC integrations.</li>
+                                        <li>Utilized Apache NiFi for data flow automation and Jolt for data transformation.</li>
+                                        <li>Implemented robust data streaming solutions using Apache Kafka.</li>
+                                    </ul>
+                                    <p class="tech-stack">Technologies: Python, Apache NiFi, Jolt transformation language, Apache Kafka</p>
+                                    
+                                    <p><strong>#4 Audioenhancement Utah (Senior Python developer)</strong></p>
+                                    <ul>
+                                        <li>Served as a Senior Python Developer, building and optimizing backend APIs.</li>
+                                        <li>Developed robust RESTful APIs using Flask and ensured code quality through Pytest.</li>
+                                        <li>Managed database interactions with SQL.</li>
+                                    </ul>
+                                    <p class="tech-stack">Technologies: Python, Flask, Pytest, SQL, backend API</p>
+                                    
+                                    <p><strong>#5 Scale.ai project (Software developer)</strong></p>
+                                    <ul>
+                                        <li>Contributed to the Scale.ai project, focusing on AI and Machine Learning applications.</li>
+                                        <li>Developed both frontend and backend components, working with APIs and Google Cloud Data.</li>
+                                    </ul>
+                                    <p class="tech-stack">Technologies: Python, AI, Machine Learning, Javascript, Frontend, Backend, API, Google compute Data</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="col-lg-6">
+                            <div class="experience-item">
+                                <h4 class="experience-title">Wordpress Developer</h4>
+                                <h5 class="experience-company">Web Tech Street</h5>
+                                <p class="experience-duration">June 2022 - September 2022 (3 months)</p>
+                                <div class="project-description">
+                                    <ul>
+                                        <li><strong>Elementor widget development:</strong> Custom-developed Elementor widgets to enhance website functionality and user experience.</li>
+                                        <li>Contributed to the development and maintenance of <a href="https://wpvibes.com/" target="_blank" rel="noopener noreferrer">https://wpvibes.com/</a>, focusing on responsive design and performance.</li>
+                                    </ul>
+                                    <p class="tech-stack">Technologies: GITHUB, BOOTSTRAP, HTML, CSS, FONTAWESOME, PHP, JAVASCRIPT, WORDPRESS, AWS</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="col-lg-6">
+                            <div class="experience-item">
+                                <h4 class="experience-title">Junior Developer</h4>
+                                <h5 class="experience-company">DEXTERWIT TECHNOLOGIES</h5>
+                                <p class="experience-duration">January 2022 - May 2022 (5 months)</p>
+                                <div class="project-description">
+                                    <p>Projects: <a href="https://www.vibrnz.com/" target="_blank" rel="noopener noreferrer">www.vibrnz.com</a></p>
+                                    <ul>
+                                        <li><strong>Frontend, Designing, Backend, Database:</strong> Participated in full-stack development, from designing user interfaces to managing database operations.</li>
+                                    </ul>
+                                    <p class="tech-stack">Technologies: GITHUB, BOOTSTRAP, HTML, CSS, FONTAWESOME, Flask, MySQL, PHP, AWS</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="col-lg-6">
+                            <div class="experience-item">
+                                <h4 class="experience-title">Project Execution Team</h4>
+                                <h5 class="experience-company">SolutionsHead Technical Services</h5>
+                                <p class="experience-duration">August 2019 - November 2021 (2 years 4 months)</p>
+                                <div class="project-description">
+                                    <p>Projects: <a href="http://www.rodentsec.com/" target="_blank" rel="noopener noreferrer">www.rodentsec.com</a></p>
+                                    <ul>
+                                        <li><strong>Web Dev, thermal systems, monitoring service:</strong> Contributed to the development and execution of web-based thermal monitoring systems.</li>
+                                        <li>Implemented payment gateway integrations and automated email sending functionalities using SendGrid.</li>
+                                    </ul>
+                                    <p class="tech-stack">Technologies: HTML, CSS, PHP, JAVASCRIPT, THERMAL SYSTEMS (CAMERAS), payment gateway integration, automated email sending using SendGrid</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="col-lg-6">
+                            <div class="experience-item">
+                                <h4 class="experience-title">Industrial Training</h4>
+                                <h5 class="experience-company">Toshniwal Industries (TIPL)</h5>
+                                <p class="experience-duration">June 2019 - July 2019 (1.5 months)</p>
+                                <div class="project-description">
+                                    <ul>
+                                        <li><strong>Feedback system:</strong> Developed a feedback system to gather and analyze user input.</li>
+                                    </ul>
+                                    <p class="tech-stack">Technologies: PHP, HTML, CSS, MySQL</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="col-12 aaaa1">
-                <h4>Research Interests</h4>
-                <p>Natural Language Processing, Image Processing, IoT, Intelligent Things, Data Prediction, Data modeling, Quantum Computing
-                    NanoScale 3D Printing, Quantum Machine Learning(AI), Nano-fabrication & Designing, Edge AI, Industrial Automation & prediction
-                    Bio-Sensing Modules, Edge Analytics.</p>
+            
+            <div class="section">
+                <div class="section-header">
+                    <h3><i class="fas fa-code me-2"></i>Skills</h3>
+                </div>
+                <div class="section-content">
+                    <div class="skill-category">
+                        <h4 class="skill-title">AI/ML & LLM</h4>
+                        <div class="skill-list">
+                            <span class="skill-tag">ChatGPT</span>
+                            <span class="skill-tag">Mistral</span>
+                            <span class="skill-tag">Claude</span>
+                            <span class="skill-tag">Gemini</span>
+                            <span class="skill-tag">DeepSeek</span>
+                            <span class="skill-tag">Machine Learning</span>
+                            <span class="skill-tag">Computer Vision</span>
+                            <span class="skill-tag">Speech Processing</span>
+                            <span class="skill-tag">Natural Language Processing</span>
+                            <span class="skill-tag">AI (LLM Making)</span>
 
+                        </div>
+                    </div>
+
+                    <div class="skill-category">
+                        <h4 class="skill-title">Technical Areas</h4>
+                        <div class="skill-list">
+                            <span class="skill-tag">Web Development</span>
+                            <span class="skill-tag">DevOps</span>
+                            <span class="skill-tag">Server Management</span>
+                            <span class="skill-tag">Computer Architecture</span>
+                            <span class="skill-tag">Data Structure & Algorithms</span>
+                            <span class="skill-tag">Network Security</span>
+                            <span class="skill-tag">Computer Networking</span>
+                            <span class="skill-tag">Database Management</span>
+                            <span class="skill-tag">Web OS Development</span>
+                            <span class="skill-tag">Object-Oriented Programming (OOP)</span>
+                            <span class="skill-tag">Microservices</span>
+                            <span class="skill-tag">MVC Architecture</span>
+                            <span class="skill-tag">ORM (Object-Relational Mapping)</span>
+                        </div>
+                    </div>
+                    
+                    <div class="skill-category">
+                        <h4 class="skill-title">Frontend</h4>
+                        <div class="skill-list">
+                            <span class="skill-tag">HTML5</span>
+                            <span class="skill-tag">CSS3</span>
+                            <span class="skill-tag">JavaScript</span>
+                            <span class="skill-tag">Bootstrap</span>
+                            <span class="skill-tag">React.js</span>
+                            <span class="skill-tag">Figma</span>
+                        </div>
+                    </div>
+                    
+                    <div class="skill-category">
+                        <h4 class="skill-title">Languages</h4>
+                        <div class="skill-list">
+                            <span class="skill-tag">C/C++</span>
+                            <span class="skill-tag">Python3</span>
+                            <span class="skill-tag">PHP</span>
+                            <span class="skill-tag">Java (Basic)</span>
+                            <span class="skill-tag">Jolt</span>
+                        </div>
+                    </div>
+                    
+                    <div class="skill-category">
+                        <h4 class="skill-title">Web Technologies & Services</h4>
+                        <div class="skill-list">
+                            <span class="skill-tag">RESTful APIs</span>
+                            <span class="skill-tag">JWT</span>
+                            <span class="skill-tag">OAuth</span>
+                            <span class="skill-tag">WebSockets</span>
+                        </div>
+                    </div>
+                    
+                    <div class="skill-category">
+                        <h4 class="skill-title">Frameworks</h4>
+                        <div class="skill-list">
+                            <span class="skill-tag">Django</span>
+                            <span class="skill-tag">Django Rest Framework (DRF)</span>
+                            <span class="skill-tag">Flask</span>
+                            <span class="skill-tag">FastAPI</span>
+                        </div>
+                    </div>
+                    
+                    <div class="skill-category">
+                        <h4 class="skill-title">Cloud Platforms (AWS)</h4>
+                        <div class="skill-list">
+                            <span class="skill-tag">EC2</span>
+                            <span class="skill-tag">S3</span>
+                            <span class="skill-tag">Route53</span>
+                            <span class="skill-tag">Lightsail</span>
+                        </div>
+                    </div>
+                    
+                    <div class="skill-category">
+                        <h4 class="skill-title">Databases</h4>
+                        <div class="skill-list">
+                            <span class="skill-tag">MySQL</span>
+                            <span class="skill-tag">PostgreSQL</span>
+                            <span class="skill-tag">MongoDB</span>
+                        </div>
+                    </div>
+                    
+                    <div class="skill-category">
+                        <h4 class="skill-title">Tools & Others</h4>
+                        <div class="skill-list">
+                            <span class="skill-tag">Docker</span>
+                            <span class="skill-tag">Redis Caching</span>
+                            <span class="skill-tag">Nginx</span>
+                            <span class="skill-tag">Gunicorn</span>
+                            <span class="skill-tag">Git</span>
+                            <span class="skill-tag">Apache NiFi</span>
+                            <span class="skill-tag">WordPress</span>
+                            <span class="skill-tag">JIRA</span>
+                            <span class="skill-tag">Confluence</span>
+                            <span class="skill-tag">Postman</span>
+                            <span class="skill-tag">GitHub</span>
+                            <span class="skill-tag">Bash</span>
+                            <span class="skill-tag">Vim</span>
+                            <span class="skill-tag">Nano</span>
+                            <span class="skill-tag">Celery</span>
+                            <span class="skill-tag">Sentry</span>
+                            <span class="skill-tag">Apache Kafka</span>
+                        </div>
+                    </div>
+                </div>
             </div>
-        </div>
-
-        <hr>
-        <center>
-                <h6>CERTIFICATIONS / LICENSES</h6>
-        </center>
-        <div class="row">
-            <div class="col-lg-6 aaaa1">
-                <h5>Quantum Computing<h5>
-                <h6>EICT/MNITJ/08-2020/QC/C/19</h6>
-                <br>
-                <h5>Udemy Ethical Hacking<h5>
-                <h6>UC-75a7054a-5e17-4382-9694-dc810237e2c2</h6>
-                <br>
-                <h5>Udemy Cloud Computing<h5>
-                <h6>UC-e70e1644-8fdd-4be4-9a37-ca7cfafbb7aa</h6>
+            
+            <div class="section">
+                <div class="section-header">
+                    <h3><i class="fas fa-graduation-cap me-2"></i>Education</h3>
+                </div>
+                <div class="section-content">
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <div class="education-item">
+                                <h4 class="education-name">Aryabhatta College of Engineering and Research Center</h4>
+                                <p>Rajasthan Technical University, Ajmer, Rajasthan, India</p>
+                                <p><strong>Bachelor of Technology in Computer Science Engineering</strong></p>
+                                <p>August 2017 - August 2021</p>
+                            </div>
+                        </div>
+                        
+                        <div class="col-lg-6">
+                            <div class="education-item">
+                                <h4 class="education-name">DAV Centenary Public School</h4>
+                                <p>Ajmer, Rajasthan, India</p>
+                                <p><strong>High School (CBSE 10th & 12th)</strong></p>
+                                <p>Science & Mathematics</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="education-item mt-4">
+                        <h4 class="education-name">Research Interests</h4>
+                        <p>Natural Language Processing, Image Processing, IoT, Intelligent Systems, Data Prediction, Data Modeling, Quantum Computing, NanoScale 3D Printing, Quantum Machine Learning (AI), Nano-fabrication & Designing, Edge AI, Industrial Automation & Prediction, Bio-Sensing Modules, Edge Analytics.</p>
+                    </div>
+                </div>
             </div>
-            <div class="col-lg-6 aaaa1">
-                <h5>Nano-fabrication<h5>
-                <h6>WUEW8AN4GFJV</h6>
-                <br>
-                <h5>Application of AI machine learning<h5>
-                <h6>RTU/TEQIP-III/F(56)/2021/5846-52</h6>
-                <br>
-                <h5>Internet of Things<h5>
-                <h6>RIET/IOTWS2020/29</h6>
-                <p><a href="https://drive.google.com/drive/folders/1mh7IC6PYQDhH20oFyw59heI5kNwZSymq?usp=sharing">Load More...</a></p>
-
+            
+            <div class="section">
+                <div class="section-header">
+                    <h3><i class="fas fa-certificate me-2"></i>Certifications</h3>
+                </div>
+                <div class="section-content">
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <div class="certification-item">
+                                <h5 class="certification-title">Quantum Computing</h5>
+                                <p class="certification-id">EICT/MNITJ/08-2020/QC/C/19</p>
+                            </div>
                             
-
+                            <div class="certification-item">
+                                <h5 class="certification-title">Udemy Ethical Hacking</h5>
+                                <p class="certification-id">UC-75a7054a-5e17-4382-9694-dc810237e2c2</p>
+                            </div>
+                        </div>
+                        
+                        <div class="col-lg-4">
+                            <div class="certification-item">
+                                <h5 class="certification-title">Udemy Cloud Computing</h5>
+                                <p class="certification-id">UC-e70e1644-8fdd-4be4-9a37-ca7cfafbb7aa</p>
+                            </div>
+                            
+                            <div class="certification-item">
+                                <h5 class="certification-title">Nano-fabrication</h5>
+                                <p class="certification-id">WUEW8AN4GFJV</p>
+                            </div>
+                        </div>
+                        
+                        <div class="col-lg-4">
+                            <div class="certification-item">
+                                <h5 class="certification-title">Application of AI machine learning</h5>
+                                <p class="certification-id">RTU/TEQIP-III/F(56)/2021/5846-52</p>
+                            </div>
+                            
+                            <div class="certification-item">
+                                <h5 class="certification-title">Internet of Things</h5>
+                                <p class="certification-id">RIET/IOTWS2020/29</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="text-center mt-3">
+                        <a href="https://drive.google.com/drive/folders/1mh7IC6PYQDhH20oFyw59heI5kNwZSymq?usp=sharing" class="btn-download" target="_blank" rel="noopener noreferrer">
+                            <i class="fas fa-certificate me-2"></i>View All Certifications
+                        </a>
+                    </div>
+                </div>
             </div>
-        </div>
-        <hr>
-        <center>
-                <h6>ADDITIONAL INFORMATION</h6>
-        </center>
-        <div class="row">
-            <div class="col-lg-6 aaaa1">
-                <h6>Communication skills</h6>
-                <ul>
-                    <li>English</li>
-                    <li>Hindi</li>
-              
-                </ul>
+            
+            <div class="section">
+                <div class="section-header">
+                    <h3><i class="fas fa-project-diagram me-2"></i>Projects</h3>
+                </div>
+                <div class="section-content">
+                    <div class="row">
+                        <div class="col-md-6 mb-4">
+                            <div class="project-item">
+                                <h4 class="project-title">Smart Attendance System with Face Recognition</h4>
+                                <p class="project-description">Developed an automated attendance system using face recognition technology. This system captures student faces, compares them with a database, and records attendance, significantly reducing manual effort and errors.</p>
+                                <p class="tech-stack">Technologies: Python, OpenCV, Face Recognition Libraries, Database (e.g., MySQL/PostgreSQL)</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-4">
+                            <div class="project-item">
+                                <h4 class="project-title">E-commerce Platform Backend</h4>
+                                <p class="project-description">Built a robust backend for an e-commerce platform, handling user authentication, product management, order processing, and payment integration. Focused on scalability and security.</p>
+                                <p class="tech-stack">Technologies: Python, Django REST Framework, PostgreSQL, JWT Authentication, Stripe API</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-4">
+                            <div class="project-item">
+                                <h4 class="project-title">Real-time Chat Application</h4>
+                                <p class="project-description">Created a real-time chat application with features like user registration, direct messaging, and group chats. Utilized WebSockets for instant communication and a NoSQL database for flexible data storage.</p>
+                                <p class="tech-stack">Technologies: Python, Flask, WebSockets (Flask-SocketIO), MongoDB</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-4">
+                            <div class="project-item">
+                                <h4 class="project-title">Automated Data Pipeline for IoT Devices</h4>
+                                <p class="project-description">Designed and implemented an automated data pipeline to collect, process, and store data from various IoT sensors. This involved setting up data ingestion, transformation, and loading into a data warehouse for analytics.</p>
+                                <p class="tech-stack">Technologies: Python, Apache Kafka, Apache NiFi, PostgreSQL, AWS S3</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="col-lg-6 aaaa1">
-                <h6>More Informartion</h6>
-                <ul>
-                    <li>Location - India</li>
-                    <li>DOB - 11th of September 1998</li>
-                    <li>Hobbies - Reading Research paper, Learning new concept(with other) Listening Thinktanks</li>
-                    <li>Nationality - Indian</li>
-                    <p><a href="https://drive.google.com/file/d/1A1dFu_uTZ4RqxLv9EdNlmadgUk7-4B2O/view?usp=sharing">Academic details</a></p>
 
-              
-                </ul>
-
+            <div class="social-links">
+                <a href="https://linkedin.com/in/ashish-gaur-a8a5b2191" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin"></i></a>
+                <a href="https://github.com/AshishGaur11" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i></a>
+                <a href="https://wa.me/+919588955258" target="_blank" rel="noopener noreferrer"><i class="fab fa-whatsapp"></i></a>
+                <a href="https://x.com/AshishGaur1998" target="_blank" rel="noopener noreferrer"><i class="fab fa-twitter"></i></a>
             </div>
-        </div>
 
-        <div class="row last">
-            <div class="col-12 aaaa1 csss1">
-                <hr>
-                <center>
-                        <h6>ADDITIONAL INFORMATION</h6>
-                
-                <a href="https://github.com/AshishGaur11"><i class="fa fa-github fa-2x aaaa2" aria-hidden="true" style="color:rgb(0, 0, 0)"></i></a>
-                <a href="https://www.linkedin.com/in/ashish-gaur-a1b9371b2/"><i class="fa fa-linkedin-square fa-2x aaaa2" aria-hidden="true" style="color:rgb(0, 0, 0)"></i></a>
-                <a href="https://twitter.com/AshishGaur1998"><i class="fa fa-twitter-square fa-2x aaaa2" aria-hidden="true" style="color:rgb(0, 0, 0)"></i></a>
-            </center>
-
-
-        </div>
-        <div class="row">
+            <div class="footer">
+                <p>&copy; 2025 Ashish Gaur. All Rights Reserved.</p>
+            </div>
         </div>
     </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
-
 </html>
+
+
