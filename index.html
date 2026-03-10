@@ -513,6 +513,68 @@ body {
     color: var(--primary-color);
     font-weight: bold;
     text-shadow: 0 0 8px rgba(0, 255, 65, 0.8);
+    
+
+}
+/* Responsive canvas */
+#gameCanvas {
+    max-width: 100%;
+    height: auto;
+    width: auto;   /* maintain aspect ratio */
+}
+
+/* Direction buttons container */
+.direction-buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+}
+
+.direction-buttons div {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+}
+
+/* Individual direction button */
+.dir-btn {
+    background: transparent;
+    border: 1px solid var(--primary-color);
+    color: var(--primary-color);
+    width: 60px;
+    height: 60px;
+    border-radius: 4px;
+    font-size: 1.8rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 10px rgba(0, 255, 65, 0.2);
+    text-shadow: 0 0 8px rgba(0, 255, 65, 0.6);
+}
+
+.dir-btn:hover,
+.dir-btn:active {
+    background: rgba(0, 255, 65, 0.15);
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(0, 255, 65, 0.4);
+}
+
+/* Ensure buttons are easily tappable on mobile */
+@media (max-width: 480px) {
+    .dir-btn {
+        width: 70px;
+        height: 70px;
+        font-size: 2.2rem;
+    }
+}
+#gameCanvas {
+    max-width: 100%;
+    height: auto;
+    width: auto;
+    touch-action: none;   /* prevents browser scrolling while swiping on canvas */
 }
 
 /* Restart button inherits .btn-download styles already */
@@ -694,11 +756,10 @@ body {
                     <div class="skill-category">
                         <h4 class="skill-title">AI/ML & LLM</h4>
                         <div class="skill-list">
-                            <span class="skill-tag">ChatGPT</span>
+                            <span class="skill-tag">n8n & ChatGPT</span>
                             <span class="skill-tag">Mistral</span>
                             <span class="skill-tag">Claude</span>
                             <span class="skill-tag">Ollama(cmd line AI(network))</span>
-                            <span class="skill-tag">Langchain</span>
                             <span class="skill-tag">pico-claw with IoT</span>                            
                             <span class="skill-tag">Gemini</span>
                             <span class="skill-tag">DeepSeek</span>
@@ -957,7 +1018,8 @@ body {
                                 <span class="skill-tag">Score: <span id="score">0</span></span>
                                 <button id="restartBtn" class="btn-download ms-3">Restart</button>
                             </div>
-                            <p class="project-description mt-2">Use arrow keys to navigate. Collect red blocks.</p>
+                            <!-- Mobile Control Buttons -->
+                            <p class="project-description mt-2">Swipe on the game area to change direction. Collect red blocks.</p>
                         </div>
                     </div>
                 <p>&copy; 2026 Ashish Gaur. All Rights Reserved.</p>
@@ -1096,6 +1158,52 @@ body {
                 direction = {x: 1, y: 0};
             }
         }
+// Touch swipe controls for mobile
+let touchStart = { x: 0, y: 0 };
+let touchMoved = false;
+const SWIPE_THRESHOLD = 20; // minimum pixels to trigger direction change
+
+canvas.addEventListener('touchstart', (e) => {
+    e.preventDefault();
+    const touch = e.touches[0];
+    touchStart.x = touch.clientX;
+    touchStart.y = touch.clientY;
+    touchMoved = false;
+});
+
+canvas.addEventListener('touchmove', (e) => {
+    e.preventDefault(); // prevents page scroll
+    if (gameOver || touchMoved) return;
+
+    const touch = e.touches[0];
+    const deltaX = touch.clientX - touchStart.x;
+    const deltaY = touch.clientY - touchStart.y;
+
+    if (Math.abs(deltaX) < SWIPE_THRESHOLD && Math.abs(deltaY) < SWIPE_THRESHOLD) return;
+
+    touchMoved = true; // only one direction change per touch
+
+    if (Math.abs(deltaX) > Math.abs(deltaY)) {
+        // horizontal swipe
+        if (deltaX > 0 && direction.x === 0) { // right
+            direction = { x: 1, y: 0 };
+        } else if (deltaX < 0 && direction.x === 0) { // left
+            direction = { x: -1, y: 0 };
+        }
+    } else {
+        // vertical swipe
+        if (deltaY > 0 && direction.y === 0) { // down
+            direction = { x: 0, y: 1 };
+        } else if (deltaY < 0 && direction.y === 0) { // up
+            direction = { x: 0, y: -1 };
+        }
+    }
+});
+
+canvas.addEventListener('touchend', (e) => {
+    e.preventDefault();
+    touchMoved = false; // reset for next touch
+});
 
         // Start game loop
         function startGame() {
